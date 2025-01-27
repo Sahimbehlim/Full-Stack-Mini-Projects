@@ -27,4 +27,6 @@ A simple URL shortener built with Node.js, Express, MongoDB, and EJS. This proje
 - **DELETE /url/:shortURL**
   Delete a shortened URL by its shortURL.
 
-## Screenshots
+## Screenshot
+
+![UI](assets/ui.png)
