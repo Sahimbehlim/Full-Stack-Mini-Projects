@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    style="font-family: Helvetica, sans-serif"
+    class="w-full min-h-screen bg-gray-900 flex items-center justify-center px-4"
+  >
+    <main
+      class="w-full max-w-3xl bg-gray-50 rounded-md p-4 flex flex-col gap-y-4 items-center"
+    >
+      <!-- Title -->
+      <h2 class="text-xl font-semibold text-gray-900">URL Shortener</h2>
+
+      <!-- URL Form -->
+      <form action="/url" method="post" class="flex w-full text-white text-sm">
+        <input
+          type="text"
+          name="fullURL"
+          placeholder="Enter full URL here"
+          class="rounded-l-md block w-full py-2.5 px-3 bg-gray-700 placeholder-gray-300 outline-none"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-gray-800 hover:bg-gray-900 px-4 rounded-r-md font-semibold"
+        >
+          Shorten
+        </button>
+      </form>
+
+      <!-- URL List -->
+      <% if (urls.length > 0) { %>
+      <div
+        class="relative w-full max-h-[50vh] overflow-auto shadow-lg rounded-lg"
+      >
+        <table class="w-full text-sm text-left rtl:text-right text-gray-300">
+          <thead class="text-xs uppercase bg-gray-700">
+            <tr>
+              <th class="px-6 py-3">Full URL</th>
+              <th class="px-6 py-3">Short URL</th>
+              <th class="px-6 py-3">Visits</th>
+              <th class="px-6 py-3">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% urls.forEach(url => { %>
+            <tr
+              class="odd:bg-gray-900 even:bg-gray-800 border-b border-gray-700"
+            >
+              <td class="px-6 py-3">
+                <a
+                  href="<%= url.originalURL %>"
+                  target="_blank"
+                  class="hover:underline"
+                  ><%= url.originalURL %></a
+                >
+              </td>
+              <td class="px-6 py-3">
+                <a
+                  href="url/<%= url.shortURL %>"
+                  target="_blank"
+                  class="hover:underline"
+                  ><%= url.shortURL %></a
+                >
+              </td>
+              <td class="px-6 py-3"><%= url.totalVisits %></td>
+              <td class="px-6 py-3">
+                <button
+                  type="button"
+                  onclick="deleteURL('<%= url.shortURL %>')"
+                  class="hover:text-red-300"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <% } %>
+    </main>
+  </body>
+  <script>
+    function deleteURL(shortURL) {
+      const confirmation = confirm("Are you sure you want to delete this URL?");
+      if (!confirmation) return;
+
+      fetch(`/url/${shortURL}`, { method: "DELETE" }).then((response) => {
+        if (response.ok) {
+          window.location.reload();
+        }
+      });
+    }
+  </script>
+</html>
