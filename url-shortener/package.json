@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Behlim Shaeem",
+  "author": "Shaeem Behlim",
   "license": "ISC",
-  "description": "A simple URL shortener built with Node.js, Express, MongoDB, and EJS.",
+  "description": "",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "mongoose": "^8.9.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.0",
     "nanoid": "^5.0.9"
   }
 }

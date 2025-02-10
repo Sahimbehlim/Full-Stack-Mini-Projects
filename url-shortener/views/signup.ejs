@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    style="font-family: Helvetica, sans-serif"
+    class="w-full min-h-screen bg-gray-900 flex items-center justify-center px-4"
+  >
+    <main
+      class="w-full max-w-3xl bg-gray-50 rounded-md p-4 flex flex-col gap-y-4 items-center"
+    >
+      <!-- Title -->
+      <h2 class="text-xl font-semibold text-gray-900">Signup</h2>
+
+      <!-- Signup Form -->
+      <form
+        action="/user"
+        method="post"
+        class="flex flex-col gap-y-3 w-full text-white text-sm"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+          class="rounded-md block w-full py-2.5 px-3 bg-gray-700 placeholder-gray-300 outline-none"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          class="rounded-md block w-full py-2.5 px-3 bg-gray-700 placeholder-gray-300 outline-none"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          class="rounded-md block w-full py-2.5 px-3 bg-gray-700 placeholder-gray-300 outline-none"
+          required
+        />
+
+        <!-- Error Message -->
+        <% if(locals.err) {%>
+        <p class="text-red-600 text-center font-semibold"><%= err %></p>
+        <% } %>
+
+        <button
+          type="submit"
+          class="bg-gray-800 hover:bg-gray-900 py-2 px-4 rounded-md font-semibold"
+        >
+          Signup
+        </button>
+
+        <p class="text-gray-900 text-center">
+          Already have an account?
+          <a href="/login" class="text-blue-600 font-semibold">Login</a>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>
