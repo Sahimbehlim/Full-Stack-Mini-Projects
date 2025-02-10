@@ -19,5 +19,6 @@ Each project folder includes:
 All projects in this repository are built using:
 
 - **Backend**: Node.js, Express.js
-- **Frontend**: EJS (Embedded JavaScript Templates)
+- **Frontend**: EJS, TailwindCSS
 - **Database**: MongoDB
+- **Authentication**: JSON Web Tokens (JWT)
