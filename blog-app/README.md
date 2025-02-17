@@ -24,11 +24,6 @@ A simple and elegant blog platform built with **Node.js, Express, EJS, MongoDB a
 | --------------------------------- | ---------------------------------- | ------------------------------- |
 | ![Homepage](screenshots/home.png) | ![Blog Post](screenshots/blog.png) | ![Pages](screenshots/pages.png) |
 
-## 🚧 Future Enhancements
-
-- Blog editing functionality
-- User profile management
-
 ## 🔗 API Endpoints
 
 ### User
@@ -47,3 +42,8 @@ A simple and elegant blog platform built with **Node.js, Express, EJS, MongoDB a
 | POST   | /blog/:blogID/comment | Add a comment to a blog | ✅ Yes        |
 | GET    | /blog/:blogID         | Get a single blog by ID | ❌ No         |
 | DELETE | /blog/:blogID         | Delete a blog           | ✅ Yes        |
+
+## 🚧 Future Enhancements
+
+- Blog editing functionality
+- User profile management
