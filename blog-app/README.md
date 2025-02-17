@@ -28,3 +28,22 @@ A simple and elegant blog platform built with **Node.js, Express, EJS, MongoDB a
 
 - Blog editing functionality
 - User profile management
+
+## 🔗 API Endpoints
+
+### User
+
+| Method | Endpoint     | Description                    | Auth Required |
+| ------ | ------------ | ------------------------------ | ------------- |
+| POST   | /user/signup | Register a new user            | ❌ No         |
+| POST   | /user/login  | Login user & get JWT           | ❌ No         |
+| GET    | /user/logout | Logout user (invalidate token) | ✅ Yes        |
+
+### Blog
+
+| Method | Endpoint              | Description             | Auth Required |
+| ------ | --------------------- | ----------------------- | ------------- |
+| POST   | /blog/add             | Create a new blog       | ✅ Yes        |
+| POST   | /blog/:blogID/comment | Add a comment to a blog | ✅ Yes        |
+| GET    | /blog/:blogID         | Get a single blog by ID | ❌ No         |
+| DELETE | /blog/:blogID         | Delete a blog           | ✅ Yes        |
