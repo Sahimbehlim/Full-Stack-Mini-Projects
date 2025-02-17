@@ -23,3 +23,4 @@ All projects in this repository are built using:
 - **Frontend**: EJS, TailwindCSS
 - **Database**: MongoDB
 - **Authentication**: JSON Web Tokens (JWT)
+- **File Uploads**: Multer
