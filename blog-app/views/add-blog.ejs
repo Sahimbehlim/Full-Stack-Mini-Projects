@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./components/head') %>
+    <title>Add Blog</title>
+  </head>
+
+  <body style="font-family: Helvetica, sans-serif">
+    <section class="w-full min-h-screen bg-gray-900">
+      <%- include('./components/navbar') %>
+      <main class="max-w-md w-full px-4 mx-auto mt-10">
+        <div class="bg-white dark:bg-gray-800 px-6 py-8 rounded-lg shadow-lg">
+          <h2
+            class="text-2xl font-semibold text-center text-gray-800 dark:text-white mb-6"
+          >
+            Add Blog
+          </h2>
+
+          <form
+            action="/blog/add"
+            method="POST"
+            enctype="multipart/form-data"
+            class="flex flex-col gap-y-3 w-full text-white text-sm"
+          >
+            <!-- Title input -->
+            <div>
+              <label
+                for="title"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Title</label
+              >
+              <input
+                type="text"
+                id="title"
+                name="title"
+                class="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                required
+              />
+            </div>
+
+            <!-- Content input -->
+            <div>
+              <label
+                for="content"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Content</label
+              >
+              <textarea
+                id="content"
+                name="content"
+                class="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Cover Image input -->
+            <div>
+              <label
+                for="coverimage"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Cover Image</label
+              >
+              <input
+                type="file"
+                id="coverimage"
+                name="coverimage"
+                class="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <!-- Error Message -->
+            <% if(locals.err) {%>
+            <p class="text-red-400 text-center"><%= locals.err %></p>
+            <% } %>
+
+            <!-- Submit button -->
+            <div>
+              <button
+                type="submit"
+                class="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 mt-2"
+              >
+                Publish
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
