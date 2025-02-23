@@ -38,4 +38,4 @@ A simple **Todo App** built using **MERN Stack** (MongoDB, Express, React, Node.
 
 ## 🎨 UI Preview
 
-<!-- ![Todo App UI](screenshots/home.png) -->
+![Todo App UI](screenshots/todo.png)
