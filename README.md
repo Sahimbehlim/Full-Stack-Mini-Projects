@@ -8,7 +8,8 @@ A collection of full-stack mini-projects built using **Node.js**, **Express**, *
 
 | #   | Project Name | Description                                     | Code                    |
 | --- | ------------ | ----------------------------------------------- | ----------------------- |
-| 1   | **Todo App** | A simple CRUD todo app with category filtering. | [View Code](./todo-app) |
+| 1   | **My Keep**  | Secure and efficient notes app.                 | [View Code](./my-keep)  |
+| 2   | **Todo App** | A simple CRUD todo app with category filtering. | [View Code](./todo-app) |
 
 ### 🟢 EJS-Based Projects (Node.js + Express + MongoDB)
 
