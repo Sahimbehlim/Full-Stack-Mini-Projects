@@ -13,8 +13,6 @@ A full-stack notes application built using **MongoDB, Express.js, React, and Nod
 - 📡 Backend API with Express.js & MongoDB
 - 🔔 Toast notifications for quick feedback
 
----
-
 ## 📂 Tech Stack
 
 ### **Frontend**
@@ -32,12 +30,24 @@ A full-stack notes application built using **MongoDB, Express.js, React, and Nod
 - 🛢️ MongoDB + Mongoose
 - 🔑 JWT Authentication
 
----
-
 ## 🎯 API Endpoints
 
----
+### User
+
+| Method | Endpoint           | Description |
+| ------ | ------------------ | ----------- |
+| POST   | /api/user/register | User Signup |
+| POST   | /api/user/login    | User Login  |
+
+### Note
+
+| Method | Endpoint                     | Description        |
+| ------ | ---------------------------- | ------------------ |
+| GET    | /api/notes                   | Fetch all notes    |
+| POST   | /api/notes                   | Create a new note  |
+| PATCH  | /api/notes/:id               | Update a note      |
+| DELETE | /api/notes/:id               | Delete a note      |
+| PATCH  | /api/notes/:id/toggle-status | Toggle note status |
+| DELETE | /api/notes/bin/empty         | Empty bin          |
 
 ## 📸 Screenshots
-
----
