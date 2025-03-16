@@ -51,3 +51,7 @@ A full-stack notes application built using **MongoDB, Express.js, React, and Nod
 | DELETE | /api/notes/bin/empty         | Empty bin          |
 
 ## 📸 Screenshots
+
+| Auth Page                         | Home Page                         |
+| --------------------------------- | --------------------------------- |
+| ![AuthPage](screenshots/auth.png) | ![Homepage](screenshots/home.png) |
