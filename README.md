@@ -15,8 +15,8 @@ A collection of full-stack mini-projects built using **Node.js**, **Express**, *
 
 | #   | Project Name      | Description                              | Code                         |
 | --- | ----------------- | ---------------------------------------- | ---------------------------- |
-| 2   | **Blog App**      | A simple and elegant blog platform.      | [View Code](./blog-app)      |
-| 3   | **URL Shortener** | A tool to shorten URLs and track visits. | [View Code](./url-shortener) |
+| 3   | **Blog App**      | A simple and elegant blog platform.      | [View Code](./blog-app)      |
+| 4   | **URL Shortener** | A tool to shorten URLs and track visits. | [View Code](./url-shortener) |
 
 Each project folder includes:
 
